@@ -1,8 +1,7 @@
-<div *ngIf="messageService.messages.length">
-
+<!-- if any message exists -->
+<div *ngIf="messageService.messages.length"> 
   <h2>Messages</h2>
-  <button class="clear"
-          (click)="messageService.clear()">clear</button>
+  <!-- An Angular event binding binds the button's click event to MessageService.clear(). -->
+  <button class="clear" (click)="messageService.clear()">clear</button>          
   <div *ngFor='let message of messageService.messages'> {{message}} </div>
-
 </div>
